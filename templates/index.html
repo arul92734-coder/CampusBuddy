@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CampusBuddy AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #3b82f6; --bg: #0f172a; --glass: rgba(30, 41, 59, 0.7); }
+        body { background: radial-gradient(circle at top right, #1e293b, #0f172a); font-family: 'Poppins', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; color: white; }
+        .chat-container { width: 420px; background: var(--glass); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 25px; padding: 25px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); }
+        .chat-header { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 15px; }
+        #chat-box { height: 350px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; padding-right: 10px; }
+        .message { padding: 12px 18px; border-radius: 18px; max-width: 80%; animation: slideUp 0.4s ease-out; font-size: 0.95rem; line-height: 1.5; }
+        .bot-message { background: #334155; align-self: flex-start; border-bottom-left-radius: 4px; }
+        .user-message { background: var(--primary); align-self: flex-end; border-bottom-right-radius: 4px; }
+        .typing { font-style: italic; color: #94a3b8; font-size: 0.8rem; display: none; margin-bottom: 10px; }
+        input { width: 100%; padding: 15px; border-radius: 15px; border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(0, 0, 0, 0.2); color: white; outline: none; box-sizing: border-box; transition: 0.3s; }
+        input:focus { border-color: var(--primary); }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+<div class="chat-container">
+    <div class="chat-header">
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712038.png" width="40px">
+        <h2 style="margin:0; font-size: 1.2rem;">CampusBuddy AI</h2>
+    </div>
+    <div id="chat-box"></div>
+    <div id="typing-indicator" class="typing">CampusBuddy is thinking...</div>
+    <input type="text" id="user-input" placeholder="Type a message..." onkeydown="if(event.key==='Enter') sendMessage()">
+</div>
+
+<script>
+    function sendMessage() {
+        let inputField = document.getElementById("user-input");
+        let chatBox = document.getElementById("chat-box");
+        let indicator = document.getElementById("typing-indicator");
+        if (!inputField.value.trim()) return;
+        
+        chatBox.innerHTML += `<div class="message user-message">${inputField.value}</div>`;
+        let userText = inputField.value;
+        inputField.value = "";
+        indicator.style.display = "block";
+        chatBox.scrollTop = chatBox.scrollHeight;
+
+        fetch('/predict', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ message: userText })
+        })
+        .then(res => res.json())
+        .then(data => {
+            indicator.style.display = "none";
+            chatBox.innerHTML += `<div class="message bot-message">${data.response}</div>`;
+            chatBox.scrollTop = chatBox.scrollHeight;
+        });
+    }
+</script>
+</body>
+</html>

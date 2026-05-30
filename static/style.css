@@ -1,0 +1,57 @@
+/* Importing a clean, modern font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    background: #0f172a; /* Deep modern navy background */
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.chat-container {
+    width: 400px;
+    background: rgba(30, 41, 59, 0.7); /* Glass effect */
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+/* Chat bubble styling */
+.message {
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin: 10px 0;
+    max-width: 80%;
+    animation: fadeIn 0.5s ease;
+}
+
+.bot-message {
+    background: #334155;
+    color: white;
+    align-self: flex-start;
+}
+
+.user-message {
+    background: #3b82f6; /* Modern Blue */
+    color: white;
+    margin-left: auto;
+}
+
+/* The Typing Animation */
+.typing {
+    font-style: italic;
+    color: #94a3b8;
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
