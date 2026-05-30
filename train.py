@@ -4,10 +4,6 @@ import nltk
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 
-# Download NLTK data (run once)
-nltk.download('punkt_tab')
-nltk.download('punkt')
-
 # Load dataset
 with open('intents.json', 'r', encoding='utf-8') as file:
     intents = json.load(file)
