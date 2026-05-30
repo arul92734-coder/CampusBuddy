@@ -1,4 +1,4 @@
 flask
 nltk
 scikit-learn
-numpy
+gunicorn
