@@ -2,9 +2,14 @@ from flask import Flask, render_template, request, jsonify
 import json
 import pickle
 import random
+import nltk  # ← add this
+
+# Download NLTK data  ← add these
+nltk.download('punkt')
+nltk.download('punkt_tab')
+nltk.download('stopwords')
 
 app = Flask(__name__)
-
 # Load model, vectorizer, and intents
 model = pickle.load(open('model.pkl', 'rb'))
 vectorizer = pickle.load(open('vectorizer.pkl', 'rb'))
