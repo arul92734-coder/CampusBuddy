@@ -2,138 +2,222 @@
   "intents": [
     {
       "tag": "greeting",
-      "patterns": ["hi", "hello", "hey", "good morning", "good afternoon", "good evening", "what's up", "howdy", "sup"],
+      "patterns": ["hi", "hello", "hey", "good morning", "good afternoon", "good evening", "what's up", "howdy", "sup", "hii", "helo", "hai"],
       "responses": [
-        "👋 Hey there! I'm CampusBuddy — your campus guide. Ask me about college timings, labs, clubs, canteen, complaints, or anything campus-related!",
-        "Hello! CampusBuddy at your service. 🎓 What can I help you with today?",
-        "Hi! Ready to help you navigate campus life. What do you need?"
+        "👋 Hey there! Welcome to Atria Institute of Technology's CampusBuddy!\n\nI can help you with:\n• 🕗 College timings & schedule\n• 🏢 Department & floor info\n• 🍽️ Canteen details\n• 💻 Labs & classrooms\n• 🎓 Clubs & activities\n• 📝 Complaints & more!\n\nWhat do you need?",
+        "Hello! CampusBuddy here — your guide to Atria Institute of Technology. 🎓\n\nAsk me anything about campus life!",
+        "Hi! Ready to help you navigate Atria campus. What's on your mind? 🚀"
+      ]
+    },
+    {
+      "tag": "college_name",
+      "patterns": ["college name", "which college", "what college", "name of college", "atria", "institute name", "our college"],
+      "responses": [
+        "🏫 Our college is **Atria Institute of Technology (AIT)**\n\nA prestigious engineering institution offering undergraduate and postgraduate programs in various disciplines.\n\n📍 Departments spread across 5 floors with modern labs, seminar halls, quadrangle, ground & more! ✅"
       ]
     },
     {
       "tag": "college_timings",
-      "patterns": ["college timings", "what time does college open", "college hours", "when does college start", "when does college close", "college schedule", "opening time", "closing time"],
+      "patterns": ["college timing", "college hour", "what time does college", "when does college start", "when does college close", "college schedule", "opening time", "closing time", "college open", "college end", "what time"],
       "responses": [
-        "🕗 **College Timings:**\n\n• **Morning Session:** 8:00 AM – 12:30 PM\n• **Afternoon Session:** 1:30 PM – 5:00 PM\n• **Office Hours:** 9:00 AM – 4:00 PM (Mon–Sat)\n• **Saturday:** 8:00 AM – 1:00 PM\n• **Sunday:** Closed\n\nGates open 30 minutes before class starts. ✅"
+        "🕗 Atria College Timings\n\n• Regular Days: 8:30 AM – 3:30 PM\n• Fee Days / Special Days: Up to 4:30 PM or 5:30 PM\n• Lab Days: May end at 12:45 PM (half day schedule)\n\n📌 Timings may vary based on your timetable.\nAlways check with your class coordinator for the day's schedule. ✅\n\n🔒 Saturday: Holiday"
       ]
     },
     {
-      "tag": "computer_lab",
-      "patterns": ["computer lab", "lab location", "where is the lab", "computer lab location", "lab hours", "lab timings"],
+      "tag": "saturday",
+      "patterns": ["saturday", "is saturday holiday", "saturday holiday", "college on saturday", "weekend"],
       "responses": [
-        "💻 **Computer Lab Details:**\n\n• **Location:** Block B, 2nd Floor — Room No. 204 & 206\n• **Timings:** 8:30 AM – 5:00 PM (Mon–Sat)\n• **Free Slots:** Available during non-lecture hours\n• **Booking:** Contact the lab assistant or your department coordinator\n\nBring your ID card for entry. ✅"
+        "🎉 Yes! Saturday is a holiday at Atria Institute of Technology.\n\nCollege operates Monday to Friday only.\n\n• Regular hours: 8:30 AM – 3:30 PM (Mon–Fri)\n• Enjoy your weekend! 😄 ✅"
+      ]
+    },
+    {
+      "tag": "floors_departments",
+      "patterns": ["floor", "floors", "which floor", "department floor", "where is ece", "where is cse", "where is ise", "department location", "which department", "floor number"],
+      "responses": [
+        "🏢 Atria Institute of Technology — Floor Guide\n\n• 🔌 1st Floor: ECE (Electronics & Communication Engineering)\n• 2nd Floor: Common areas / Admin\n• 💻 3rd Floor: CSE (Computer Science Engineering)\n• 📊 4th Floor: ISE (Information Science Engineering)\n• 5th Floor: Additional departments / Facilities\n\nTotal: 5 Floors ✅\n\nNeed directions to a specific department? Just ask!"
+      ]
+    },
+    {
+      "tag": "ece_department",
+      "patterns": ["ece", "electronics", "electronics department", "ece department", "ece floor", "where is ece"],
+      "responses": [
+        "🔌 ECE Department — Electronics & Communication Engineering\n\n• Location: 1st Floor\n• Labs: Electronics lab, Communication lab, and more\n• Weekly Labs: 2-hour sessions, 3 times a week\n\nFor faculty or room details, check with your ECE department coordinator. ✅"
+      ]
+    },
+    {
+      "tag": "cse_department",
+      "patterns": ["cse", "computer science", "cs department", "cse department", "cse floor", "where is cse"],
+      "responses": [
+        "💻 CSE Department — Computer Science Engineering\n\n• Location: 3rd Floor\n• Labs: Programming lab, Data structures lab, Networks lab & more\n• Weekly Labs: 2-hour sessions, 3 times a week\n\nFor faculty or room details, check with your CSE department coordinator. ✅"
+      ]
+    },
+    {
+      "tag": "ise_department",
+      "patterns": ["ise", "information science", "is department", "ise department", "ise floor", "where is ise"],
+      "responses": [
+        "📊 ISE Department — Information Science Engineering\n\n• Location: 4th Floor\n• Labs: Software lab, Database lab, AI/ML lab & more\n• Weekly Labs: 2-hour sessions, 3 times a week\n\nFor faculty or room details, check with your ISE department coordinator. ✅"
+      ]
+    },
+    {
+      "tag": "labs",
+      "patterns": ["lab", "labs", "laboratory", "lab timing", "lab schedule", "lab hours", "lab session", "when is lab", "lab days"],
+      "responses": [
+        "🔬 Lab Schedule at Atria\n\n• Duration: 2 hours per session\n• Frequency: 3 lab sessions per week\n• Type: Different labs each session (rotating subjects)\n\n📌 Lab Locations by Department:\n• ECE Labs: 1st Floor\n• CSE Labs: 3rd Floor\n• ISE Labs: 4th Floor\n\nCheck your personal timetable for your specific lab days and timings. ✅\n\n⚠️ Bring your lab record and wear formal shoes!"
       ]
     },
     {
       "tag": "canteen",
-      "patterns": ["canteen", "canteen location", "where is canteen", "food", "cafeteria", "canteen timings", "canteen menu"],
+      "patterns": ["canteen", "where is canteen", "food", "cafeteria", "canteen timing", "canteen menu", "canteen open", "eating", "lunch", "breakfast", "snacks", "canteen location"],
       "responses": [
-        "🍽️ **Canteen Info:**\n\n• **Location:** Ground Floor, near the Main Block entrance\n• **Timings:**\n  - Breakfast: 8:00 AM – 9:30 AM\n  - Lunch: 12:30 PM – 2:00 PM\n  - Snacks & Tea: 3:30 PM – 5:00 PM\n• **Menu:** South Indian breakfast, rice meals, sandwiches, juices & snacks\n• **Payment:** Cash & UPI accepted ✅"
+        "🍽️ Atria Canteen Info\n\n• Location: Ground Floor area\n• Opens: 10:30 AM (after first session)\n• Available: Snacks, meals, juices, tea & coffee\n\n📌 Canteen Tips:\n• Busiest during 10:30 AM break — go early!\n• Lunch available around 1:00 PM onwards\n• UPI & cash accepted\n\n⚠️ Canteen is closed on Saturdays (college holiday). ✅"
       ]
     },
     {
-      "tag": "holiday_info",
-      "patterns": ["holiday", "holidays", "holiday list", "upcoming holiday", "when is holiday", "leave", "vacation", "holiday schedule"],
+      "tag": "parking",
+      "patterns": ["parking", "parking lot", "where to park", "bike parking", "car parking", "vehicle parking", "park my bike", "parking area"],
       "responses": [
-        "📅 **Holiday Information:**\n\nFor the official holiday list, check:\n• **ERP Portal → Academic Calendar** section\n• **Notice Board** near the Admin Block\n\n📌 Common holidays include:\n• National Holidays (Republic Day, Independence Day, Gandhi Jayanti)\n• Festival Holidays (Pongal, Diwali, Eid, Christmas)\n• College Annual Day & Sports Day\n\nAlways verify with your class coordinator for last-minute changes. ✅"
+        "🅿️ Parking at Atria\n\n• Parking Lot: Available on campus premises\n• For: Two-wheelers and four-wheelers\n• Location: Ground level / campus entrance area\n\n📌 Tips:\n• Park in designated areas only\n• Keep your vehicle RC and college ID handy\n• Avoid blocking emergency access lanes ✅"
+      ]
+    },
+    {
+      "tag": "ground",
+      "patterns": ["ground", "playground", "sports ground", "play ground", "sports", "outdoor", "field"],
+      "responses": [
+        "⚽ Campus Ground at Atria\n\n• A spacious ground available for sports and outdoor activities\n• Used for: Cricket, Football, Athletics & other sports\n• Also used for: Cultural events, college fests & gatherings\n\n📌 For sports equipment or ground booking, contact the Physical Education department. ✅"
+      ]
+    },
+    {
+      "tag": "culturals",
+      "patterns": ["cultural", "culturals", "fest", "college fest", "events", "cultural events", "annual day", "celebrations", "cultural program", "when is cultural"],
+      "responses": [
+        "🎭 Cultural Events at Atria\n\n• Venue: College Ground (main large events)\n• Type: Cultural programs, fests, performances, competitions\n• Frequency: Not frequent — special occasions only\n\n📌 Watch out for:\n• Annual Cultural Fest\n• Department-specific events\n• National & special day celebrations\n\nAnnouncements are made via notice boards and class coordinators. Keep an eye out! 🎉 ✅"
+      ]
+    },
+    {
+      "tag": "seminar_hall",
+      "patterns": ["seminar hall", "seminar", "auditorium", "hall", "conference room", "presentation hall", "where is seminar hall", "seminar room"],
+      "responses": [
+        "🎤 Seminar Halls at Atria\n\n• Multiple seminar halls available across departments\n• Used for: Guest lectures, seminars, project presentations, workshops\n• Equipped with: Projector, mic system, seating arrangement\n\n📌 To book a seminar hall:\n• Contact your department coordinator\n• Or raise a request through the Admin Office ✅"
+      ]
+    },
+    {
+      "tag": "quadrangle",
+      "patterns": ["quadrangle", "quad", "open area", "sitting area", "courtyard", "common area", "outside sitting"],
+      "responses": [
+        "🌿 Quadrangle at Atria\n\n• A open common area within the campus\n• Used for: Relaxing between classes, informal gatherings, small events\n• A great spot to hang out with friends! 😊\n\n📌 Keep the quadrangle clean and respect shared spaces. ✅"
       ]
     },
     {
       "tag": "complaint",
-      "patterns": ["complaint", "register complaint", "grievance", "report issue", "file complaint", "problem", "raise issue", "complaint process"],
+      "patterns": ["complaint", "register complaint", "grievance", "report issue", "file complaint", "raise issue", "complaint process", "problem", "issue"],
       "responses": [
-        "📝 **How to Register a Complaint:**\n\n**Step 1:** Log in to the **ERP Portal**\n**Step 2:** Go to **'Grievance Cell'** section\n**Step 3:** Fill in your complaint details clearly\n**Step 4:** Submit — you'll get a reference number\n\n📌 Alternatively:\n• Visit the **Student Affairs Office** (Block A, Room 101)\n• Email: grievance@yourcollege.edu\n\nAll complaints are reviewed within **3–5 working days**. ✅"
+        "📝 How to Register a Complaint at Atria\n\nStep 1: Log in to the ERP Portal\nStep 2: Go to 'Grievance Cell' section\nStep 3: Fill in your complaint clearly with details\nStep 4: Submit — note your reference number\n\n📌 Alternatively:\n• Visit the Student Affairs Office directly\n• Speak to your class coordinator or HOD\n• Email the grievance cell\n\nAll complaints are reviewed within 3–5 working days. ✅"
+      ]
+    },
+    {
+      "tag": "holiday_info",
+      "patterns": ["holiday", "holidays", "holiday list", "upcoming holiday", "when is holiday", "leave", "vacation", "holiday schedule", "public holiday"],
+      "responses": [
+        "📅 Holiday Info at Atria\n\n• Saturday: Weekly holiday (no college) 🎉\n• Sunday: Holiday\n\n📌 Other holidays:\n• National Holidays (Republic Day, Independence Day, Gandhi Jayanti)\n• Festival Holidays (Pongal, Diwali, Eid, Christmas etc.)\n• College-specific holidays announced via notice board\n\nAlways check with your class coordinator or notice board for updated holiday list. ✅"
       ]
     },
     {
       "tag": "coding_club",
       "patterns": ["coding club", "code club", "programming club", "tech club", "join coding club", "coding club details"],
       "responses": [
-        "💡 **Coding Club — CampusCode:**\n\n• **Focus:** DSA, Web Dev, Competitive Programming, Hackathons\n• **Meetings:** Every Saturday, 10:00 AM – 12:00 PM\n• **Venue:** Computer Lab 204, Block B\n• **How to Join:** Fill the form on the Notice Board or contact the club coordinator\n\n🏆 Past activities: Internal hackathons, LeetCode contests, project showcases\n\nOpen to all branches & years. ✅"
+        "💡 Coding Club at Atria\n\n• Focus: DSA, Web Development, Competitive Programming, Hackathons\n• Meetings: Scheduled on weekdays (check notice board for current timing)\n• Venue: CSE/ISE Lab floors (3rd or 4th floor)\n• How to Join: Contact club coordinator or check department notice board\n\n🏆 Activities: Internal hackathons, coding contests, project showcases\n\nOpen to all branches and years! ✅"
       ]
     },
     {
       "tag": "all_clubs",
-      "patterns": ["all clubs", "clubs list", "what clubs", "clubs available", "student clubs", "extracurricular", "activities"],
+      "patterns": ["all clubs", "clubs list", "what clubs", "clubs available", "student clubs", "extracurricular", "activities", "club"],
       "responses": [
-        "🎯 **Student Clubs at Campus:**\n\n| Club | Focus | Meeting Day |\n|------|-------|-------------|\n| 💻 CampusCode | Coding & Tech | Saturday |\n| 🤖 Robotics Club | Hardware & AI | Friday |\n| 🎵 Music Club | Vocals & Instruments | Wednesday |\n| 🎨 Art & Design | Creative Arts | Thursday |\n| 📸 Photography Club | Clicks & Edits | Sunday |\n| 📢 NSS | Social Service | Monthly |\n\nContact your Student Affairs Office or check the notice board to register! ✅"
-      ]
-    },
-    {
-      "tag": "motivation",
-      "patterns": ["motivation", "motivate me", "i'm stressed", "feeling down", "inspire me", "i need motivation", "encourage me", "sad", "depressed"],
-      "responses": [
-        "💪 **You've got this!**\n\n*\"Success is not final, failure is not fatal — it is the courage to continue that counts.\"* — Winston Churchill\n\nRemember: Every expert was once a beginner. Every pro was once an amateur. Keep going, one step at a time. 🚀",
-        "🌟 Hey, tough days are part of the journey! The fact that you showed up today already makes you ahead of the person who gave up. Believe in your process. 💛",
-        "🎓 College is hard — but so are you. Take a break, breathe, and come back stronger. You're building something great. Keep pushing! 🔥"
+        "🎯 Student Clubs at Atria Institute of Technology\n\n💻 Coding Club — Programming & Tech\n🤖 Robotics Club — Hardware & AI projects\n🎵 Music Club — Vocals & instruments\n🎨 Art & Design Club — Creative arts\n📸 Photography Club — Campus photography\n📢 NSS — National Social Service\n🏆 Sports Club — Cricket, Football & Athletics\n\n📌 For joining any club:\n• Check your department notice board\n• Contact Student Affairs office ✅"
       ]
     },
     {
       "tag": "library",
-      "patterns": ["library", "library location", "library timings", "where is library", "books", "borrow book"],
+      "patterns": ["library", "library location", "library timing", "where is library", "books", "borrow book", "reading room"],
       "responses": [
-        "📚 **Library Details:**\n\n• **Location:** Block C, Ground Floor\n• **Timings:** 8:30 AM – 5:30 PM (Mon–Sat)\n• **Books Available:** 10,000+ titles across all departments\n• **Borrowing:** Up to 3 books at a time, for 14 days\n• **Fine:** ₹2/day per book for late return\n• **e-Resources:** Available via ERP Portal → Digital Library ✅"
+        "📚 Library at Atria\n\n• Location: Within the campus building\n• Timings: 8:30 AM – 5:00 PM (Mon–Fri)\n• Collection: Technical books, reference materials, journals\n• Borrowing: Student ID required\n\n📌 e-Resources also available — check with librarian for digital library access. ✅"
       ]
     },
     {
       "tag": "wifi",
-      "patterns": ["wifi", "internet", "wi-fi", "wifi password", "campus wifi", "internet access", "network"],
+      "patterns": ["wifi", "internet", "wi-fi", "wifi password", "campus wifi", "internet access", "network", "no internet"],
       "responses": [
-        "📶 **Campus Wi-Fi:**\n\n• **Network Name:** CampusNet_Student\n• **Access:** Use your college roll number as username\n• **Password:** Your ERP portal password\n• **Coverage:** All blocks, canteen, and library\n• **Speed:** Up to 100 Mbps shared\n\n⚠️ Issues? Contact IT Support — Block A, Room 005 or email: itsupport@yourcollege.edu ✅"
+        "📶 Campus Wi-Fi at Atria\n\n• Available across campus floors\n• Login: Use your college credentials\n\n⚠️ Wi-Fi issues?\n• Contact the IT department\n• Or visit the computer lab on your floor for assistance ✅"
       ]
     },
     {
-      "tag": "exam_schedule",
-      "patterns": ["exam", "exam schedule", "exam timetable", "when is exam", "test schedule", "internal marks", "exam dates"],
+      "tag": "exam",
+      "patterns": ["exam", "exam schedule", "exam timetable", "when is exam", "test schedule", "internal marks", "exam dates", "cie", "see", "semester exam"],
       "responses": [
-        "📋 **Exam Information:**\n\n• **Internal Assessments:** Announced by individual faculty — check your class group\n• **Semester Exams:** Published on ERP Portal under **'Exam Schedule'** 2 weeks prior\n• **Hall Tickets:** Available on ERP Portal 1 week before exams\n• **Results:** Published within 3–4 weeks after exam\n\n📌 For exam-related issues, contact the Exam Cell — Admin Block, Room 102. ✅"
+        "📋 Exam Info at Atria\n\n• CIE (Internal): Announced by faculty — check class group/notice board\n• SEE (Semester End Exam): Schedule published 2 weeks prior on ERP Portal\n• Hall Tickets: Available on ERP Portal 1 week before exam\n• Results: Published within 3–4 weeks after exam\n\n📌 For exam-related issues, contact the Exam Cell at the Admin Office. ✅"
       ]
     },
     {
       "tag": "fees",
-      "patterns": ["fees", "fee payment", "tuition fees", "how to pay fees", "fee due", "fee receipt"],
+      "patterns": ["fees", "fee payment", "tuition fees", "how to pay fees", "fee due", "fee receipt", "fee day"],
       "responses": [
-        "💳 **Fee Payment:**\n\n• **Portal:** Log in to ERP → **'Fee Payment'** section\n• **Modes:** Online (UPI, Net Banking, Debit/Credit Card) or Cash at the Accounts Office\n• **Accounts Office:** Block A, Ground Floor — 9:00 AM to 3:00 PM\n• **Receipt:** Auto-generated on ERP after payment\n\n⚠️ Pay before the due date to avoid a late fine. Check ERP for current due dates. ✅"
+        "💳 Fee Payment at Atria\n\n• Portal: ERP → 'Fee Payment' section\n• Modes: UPI, Net Banking, Debit/Credit Card or Cash at Accounts Office\n• Fee Days: College may extend till 4:30 PM or 5:30 PM on fee collection days\n• Receipt: Auto-generated on ERP after payment\n\n⚠️ Pay before due date to avoid late fine. Check ERP for current due dates. ✅"
       ]
     },
     {
       "tag": "attendance",
-      "patterns": ["attendance", "my attendance", "attendance percentage", "how to check attendance", "low attendance", "shortage"],
+      "patterns": ["attendance", "my attendance", "attendance percentage", "check attendance", "low attendance", "shortage", "attendance criteria"],
       "responses": [
-        "📊 **Attendance Details:**\n\n• **Minimum Required:** 75% to be eligible for exams\n• **Check:** ERP Portal → **'My Attendance'**\n• **Updates:** Reflected within 24 hours of class\n• **Shortage Letter:** Issued if attendance falls below 65%\n\n📌 For medical leave or genuine reasons, submit a leave letter to your class coordinator within 3 days. ✅"
+        "📊 Attendance at Atria\n\n• Minimum Required: 75% to sit for SEE (Semester End Exam)\n• Check: ERP Portal → 'My Attendance'\n• Updates: Reflected within 24 hours of class\n• Shortage Warning: Issued if attendance falls below 65%\n\n📌 Lab attendance is also counted — don't skip labs!\n\nFor medical leave, submit a letter to your class coordinator within 3 days. ✅"
+      ]
+    },
+    {
+      "tag": "timetable",
+      "patterns": ["timetable", "time table", "class schedule", "my schedule", "today schedule", "class timing", "when is class"],
+      "responses": [
+        "📆 Timetable at Atria\n\n• Check: ERP Portal → 'My Timetable'\n• Includes: Lecture hours + Lab sessions (2 hrs, 3 times/week)\n• Timing varies: Regular days end 3:30 PM, some days 4:30 or 5:30 PM\n\n📌 Your timetable is specific to your section and semester.\nAlways carry a copy or screenshot for reference! ✅"
+      ]
+    },
+    {
+      "tag": "motivation",
+      "patterns": ["motivation", "motivate me", "stressed", "feeling down", "inspire me", "i need motivation", "encourage me", "sad", "depressed", "tired", "bored"],
+      "responses": [
+        "💪 You've got this, Atrian!\n\n\"Success is not final, failure is not fatal — it is the courage to continue that counts.\"\n— Winston Churchill\n\nEvery great engineer started exactly where you are. Keep pushing! 🚀",
+        "🌟 Hey, tough days are part of the journey!\n\nThe fact that you showed up to college today already makes you ahead. Believe in your process! 💛\n\nAtria is giving you the platform — you bring the effort! 🎓",
+        "🔥 College is hard — but so are you!\n\nTake a short break, grab something from the canteen, breathe, and come back stronger.\n\nYou're building your future at Atria — one lecture at a time! 💪"
       ]
     },
     {
       "tag": "joke",
-      "patterns": ["joke", "tell me a joke", "make me laugh", "funny", "humor"],
+      "patterns": ["joke", "tell me a joke", "make me laugh", "funny", "humor", "laugh"],
       "responses": [
-        "😄 Why do programmers prefer dark mode?\n\nBecause light attracts **bugs**! 🐛",
-        "😂 A student asked the professor: 'Will this be on the exam?'\nProfessor: 'Everything is on the exam.'\nStudent: 'Even the attendance?' 💀",
-        "🤣 Why did the student eat his homework?\nBecause the teacher told him it was a **piece of cake**! 🎂"
+        "😄 Why do CSE students prefer dark mode?\n\nBecause light attracts bugs! 🐛",
+        "😂 An Atria professor asked: 'Will this be on the exam?'\nStudent: 'Will attendance be on the exam too?' 💀",
+        "🤣 Why did the ISE student bring a ladder to college?\n\nBecause they heard the course was on a higher level! 😂"
       ]
     },
     {
       "tag": "thanks",
-      "patterns": ["thank you", "thanks", "thank u", "thx", "appreciate it", "helpful"],
+      "patterns": ["thank you", "thanks", "thank u", "thx", "appreciate it", "helpful", "thank you so much"],
       "responses": [
-        "😊 You're welcome! Happy to help anytime. If you have more questions, just ask!",
-        "🎓 Glad I could help! Come back whenever you need campus info. Good luck! 🌟",
-        "No problem at all! That's what I'm here for. 🤝"
+        "😊 You're welcome! Happy to help anytime. Go Atrians! 🎓",
+        "Glad I could help! Come back whenever you need campus info. All the best! 🌟",
+        "No problem at all! That's what CampusBuddy is here for. 🤝"
       ]
     },
     {
       "tag": "goodbye",
-      "patterns": ["bye", "goodbye", "see you", "take care", "cya", "exit", "quit"],
+      "patterns": ["bye", "goodbye", "see you", "take care", "cya", "exit", "quit", "see ya"],
       "responses": [
-        "👋 Goodbye! Have a productive day on campus! 🎓",
+        "👋 Goodbye! Have a productive day at Atria! 🎓",
         "See you later! Come back anytime you need help. 🚀",
-        "Take care! All the best with your studies! 💪"
+        "Take care! All the best with your studies at Atria! 💪"
       ]
     },
     {
       "tag": "unknown",
       "patterns": [],
       "responses": [
-        "🤔 I'm not sure about that one yet. Try asking about:\n• College timings\n• Computer lab\n• Canteen\n• Clubs\n• Complaints\n• Exams or Attendance\n\nOr contact the Admin Office for specific queries. ✅"
+        "🤔 Hmm, I'm not sure about that yet.\n\nTry asking about:\n• College timings or schedule\n• Department floors (ECE/CSE/ISE)\n• Canteen, labs, parking\n• Clubs, cultural events\n• Exams, attendance, fees\n\nOr contact your department coordinator for specific queries. ✅"
       ]
     }
   ]
