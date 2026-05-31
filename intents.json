@@ -2,137 +2,139 @@
   "intents": [
     {
       "tag": "greeting",
-      "patterns": ["Hi", "Hello", "Hey", "yo", "sup", "bro", "machan", "dude"],
-      "responses": ["Hey there! CampusBuddy here. What's on your mind? 🚀", "What's up! Need help surviving college today? 😉"]
-    },
-    {
-      "tag": "classroom",
-      "patterns": ["which room today", "where is classroom", "class shifted ah", "room number", "which floor", "class location"],
-      "responses": ["Check the daily timetable on your ERP portal for room changes. Usually, core subjects are in Block A! 🏢", "Room details are updated on the department notice board and student portal. Don't be late!"]
-    },
-    {
-      "tag": "timing",
-      "patterns": ["college timing", "what time college starts", "when does class end today", "working hours", "when is lunch break", "timing for tomorrow"],
-      "responses": ["College runs from 8:30 AM to 3:30 PM. Lunch is usually at 12:30 PM. Hang in there! ⏰", "First period starts at 8:30 AM sharp. Don't miss it or you'll lose attendance!"]
-    },
-    {
-      "tag": "holiday",
-      "patterns": ["holiday tomorrow ah", "college leave ah", "is saturday working", "holiday list", "government holiday"],
-      "responses": ["Check the official academic calendar on the portal. But don't get your hopes up too much! 😅", "Unless it's a red-letter day or officially announced, assume you have classes. 🎒"]
-    },
-    {
-      "tag": "weather_holiday",
-      "patterns": ["college closed due to rain", "rain holiday announced", "weather affecting classes", "storm leave"],
-      "responses": ["Any rain holidays will be officially SMS'd to your registered number by the Principal's office. 🌧️", "Keep an eye on the official college WhatsApp group for weather-related leave updates!"]
-    },
-    {
-      "tag": "emergency",
-      "patterns": ["medical room location", "ambulance number", "emergency contact", "security office", "help urgently"],
-      "responses": ["🚨 For emergencies, contact the main security gate immediately or rush to the Medical Room on the Ground Floor of Block B.", "🚨 Campus Emergency: Call the warden or security desk right away. Medical staff is available 24/7."]
-    },
-    {
-      "tag": "id_card",
-      "patterns": ["lost my id card", "duplicate id card", "id card issue", "where to get id card", "temporary id"],
-      "responses": ["Lost your ID? Go to the Admin Block immediately to request a temporary pass and apply for a duplicate (fee applies). 🪪", "Duplicate IDs are handled by the student affairs office. Bring a passport photo!"]
-    },
-    {
-      "tag": "wifi",
-      "patterns": ["wifi password", "internet not working", "campus wifi", "wifi login", "network issue", "wifi?"],
-      "responses": ["Your WiFi login is your Student Registration Number and your ERP password. 📶", "If the campus WiFi is down, try complaining to the IT desk in the computer lab."]
-    },
-    {
-      "tag": "erp_portal",
-      "patterns": ["erp login", "forgot erp password", "portal not opening", "student portal", "results portal"],
-      "responses": ["If you forgot your ERP password, click 'Forgot Password' on the login page to get an OTP on your registered email. 💻", "The portal might be down due to heavy traffic (especially during results!). Try again in 10 minutes."]
-    },
-    {
-      "tag": "cgpa",
-      "patterns": ["cgpa calculator", "how to increase cgpa", "minimum cgpa", "cgpa requirement", "cgpa?"],
-      "responses": ["To maintain a good CGPA, aim for above 8.0! You need at least a 6.5 to sit for most placements. 📈", "Check your current CGPA on the results tab of the ERP portal. Keep grinding!"]
-    },
-    {
-      "tag": "scholarship",
-      "patterns": ["scholarship available", "scholarship amount", "apply scholarship", "government scholarship"],
-      "responses": ["Scholarship forms are usually released in August. Visit the Admin office (Scholarship Desk) for eligibility details. 🏅", "First-graduate and merit scholarships are available. Check the notice board for deadlines!"]
-    },
-    {
-      "tag": "hostel_entry",
-      "patterns": ["hostel gate timing", "late entry allowed", "hostel permission", "leave application"],
-      "responses": ["Hostel curfew is strictly 7:30 PM. For late entry or overnight leave, you need warden approval and a parent's call! 🚪", "Submit your leave application via the hostel portal at least 24 hours in advance."]
-    },
-    {
-      "tag": "mess",
-      "patterns": ["mess menu", "breakfast timing", "lunch timing", "dinner timing", "canteen food"],
-      "responses": ["Breakfast: 7:30 AM | Lunch: 12:30 PM | Dinner: 8:00 PM. Check the notice board for today's special! 🍽️", "If the mess food is boring today, the main canteen has Maggi and Samosas waiting for you! 🍛"]
-    },
-    {
-      "tag": "projects",
-      "patterns": ["project ideas", "final year project", "mini project", "ai project", "chatbot project", "dataset needed"],
-      "responses": ["For AI/ML projects, Kaggle is your best friend for datasets. Building a chatbot (like me!) is a great final year project! 🤖", "Discuss project ideas with your project guide. Make sure it solves a real-world problem!"]
-    },
-    {
-      "tag": "arrear_fail",
-      "patterns": ["i failed", "arrear details", "backlog subjects", "supplementary exam", "revaluation process"],
-      "responses": ["Hey, take a deep breath. Arrears happen. Check the portal for the revaluation deadline and supplementary exam dates. You can clear this! 💪", "Don't panic! Apply for revaluation if you are confident, or start prepping for the supplementary exams. 📚"]
-    },
-    {
-      "tag": "lost_found",
-      "patterns": ["lost wallet", "lost phone", "found item", "lost keys"],
-      "responses": ["Check the Lost & Found box at the main security cabin. If you found something, please deposit it there! 📦"]
-    },
-    {
-      "tag": "mental_health",
-      "patterns": ["feeling stressed", "need counseling", "anxiety before exams", "mental health support", "burnout"],
-      "responses": ["College can be overwhelming. Please reach out to the campus counselor in Block C. Your mental health matters more than any grade. ❤️", "It's okay to feel stressed. Take a walk, drink some water, and talk to a friend. The campus counseling center is always open for you. 🧠"]
-    },
-    {
-      "tag": "slang_short",
-      "patterns": ["attendance?", "exam?", "assignment?", "holiday?", "results?", "college open ah", "staff vanthacha"],
-      "responses": ["I'm catching your drift! Check the ERP portal for exact details on attendance, exams, and results. Keep your ID card handy! 📱", "Looks like you're in a hurry! Open your student portal for the quickest updates on that. 🏃‍♂️"]
-    },
-    {
-      "tag": "joke",
-      "patterns": ["tell me joke", "make me laugh", "roast me", "fun fact"],
+      "patterns": ["hi", "hello", "hey", "good morning", "good afternoon", "good evening", "what's up", "howdy", "sup"],
       "responses": [
-        "Why did the engineering student cross the road? To escape the upcoming assignment deadline! 🏃‍♂️💨",
-        "Your attendance percentage is the only joke here. (Just kidding... unless? 👀)",
-        "A college student's diet: 10% water, 20% stress, and 70% instant noodles. 🍜"
+        "👋 Hey there! I'm CampusBuddy — your campus guide. Ask me about college timings, labs, clubs, canteen, complaints, or anything campus-related!",
+        "Hello! CampusBuddy at your service. 🎓 What can I help you with today?",
+        "Hi! Ready to help you navigate campus life. What do you need?"
       ]
     },
     {
-      "tag": "lab_info",
-      "patterns": ["lab timing", "computer lab open", "system available", "lab assistant", "python lab", "experiment list"],
-      "responses": ["Computer labs are open from 9:00 AM to 5:00 PM. Lab assistants are available for help during your scheduled practical hours. 💻"]
+      "tag": "college_timings",
+      "patterns": ["college timings", "what time does college open", "college hours", "when does college start", "when does college close", "college schedule", "opening time", "closing time"],
+      "responses": [
+        "🕗 **College Timings:**\n\n• **Morning Session:** 8:00 AM – 12:30 PM\n• **Afternoon Session:** 1:30 PM – 5:00 PM\n• **Office Hours:** 9:00 AM – 4:00 PM (Mon–Sat)\n• **Saturday:** 8:00 AM – 1:00 PM\n• **Sunday:** Closed\n\nGates open 30 minutes before class starts. ✅"
+      ]
     },
     {
-      "tag": "sports",
-      "patterns": ["sports day", "football ground", "cricket match", "basketball court", "sports registration"],
-      "responses": ["Sports facilities are open for students from 4:00 PM to 6:00 PM daily. Register for tournament participation at the Physical Education department! 🏀⚽"]
+      "tag": "computer_lab",
+      "patterns": ["computer lab", "lab location", "where is the lab", "computer lab location", "lab hours", "lab timings"],
+      "responses": [
+        "💻 **Computer Lab Details:**\n\n• **Location:** Block B, 2nd Floor — Room No. 204 & 206\n• **Timings:** 8:30 AM – 5:00 PM (Mon–Sat)\n• **Free Slots:** Available during non-lecture hours\n• **Booking:** Contact the lab assistant or your department coordinator\n\nBring your ID card for entry. ✅"
+      ]
     },
     {
-      "tag": "coding_help",
-      "patterns": ["python code", "c program", "java code", "debug code", "leetcode help"],
-      "responses": ["I can help with basic syntax! For complex debugging or LeetCode, I recommend practicing on platforms like HackerRank or StackOverflow. What's the error in your code? 👨‍💻"]
+      "tag": "canteen",
+      "patterns": ["canteen", "canteen location", "where is canteen", "food", "cafeteria", "canteen timings", "canteen menu"],
+      "responses": [
+        "🍽️ **Canteen Info:**\n\n• **Location:** Ground Floor, near the Main Block entrance\n• **Timings:**\n  - Breakfast: 8:00 AM – 9:30 AM\n  - Lunch: 12:30 PM – 2:00 PM\n  - Snacks & Tea: 3:30 PM – 5:00 PM\n• **Menu:** South Indian breakfast, rice meals, sandwiches, juices & snacks\n• **Payment:** Cash & UPI accepted ✅"
+      ]
     },
     {
-      "tag": "parking",
-      "patterns": ["parking area", "bike parking", "car parking", "parking fee"],
-      "responses": ["Student parking is available near Gate 2. Please ensure you have your parking sticker displayed on your vehicle! 🚗🚲"]
+      "tag": "holiday_info",
+      "patterns": ["holiday", "holidays", "holiday list", "upcoming holiday", "when is holiday", "leave", "vacation", "holiday schedule"],
+      "responses": [
+        "📅 **Holiday Information:**\n\nFor the official holiday list, check:\n• **ERP Portal → Academic Calendar** section\n• **Notice Board** near the Admin Block\n\n📌 Common holidays include:\n• National Holidays (Republic Day, Independence Day, Gandhi Jayanti)\n• Festival Holidays (Pongal, Diwali, Eid, Christmas)\n• College Annual Day & Sports Day\n\nAlways verify with your class coordinator for last-minute changes. ✅"
+      ]
     },
     {
-      "tag": "clubs",
-      "patterns": ["coding club", "dance club", "music club", "robotics club", "club registration"],
-      "responses": ["Our college has amazing clubs! Robotics, Coding, and Music clubs are currently accepting new members. Check the student notice board for sign-up links! 🎨🤖"]
+      "tag": "complaint",
+      "patterns": ["complaint", "register complaint", "grievance", "report issue", "file complaint", "problem", "raise issue", "complaint process"],
+      "responses": [
+        "📝 **How to Register a Complaint:**\n\n**Step 1:** Log in to the **ERP Portal**\n**Step 2:** Go to **'Grievance Cell'** section\n**Step 3:** Fill in your complaint details clearly\n**Step 4:** Submit — you'll get a reference number\n\n📌 Alternatively:\n• Visit the **Student Affairs Office** (Block A, Room 101)\n• Email: grievance@yourcollege.edu\n\nAll complaints are reviewed within **3–5 working days**. ✅"
+      ]
     },
     {
-      "tag": "complaints",
-      "patterns": ["complaint register", "faculty complaint", "wifi complaint", "hostel complaint", "canteen complaint"],
-      "responses": ["I'm sorry to hear that. You can register a formal complaint on the ERP portal under 'Grievance Cell' so the concerned department can look into it. 📝"]
+      "tag": "coding_club",
+      "patterns": ["coding club", "code club", "programming club", "tech club", "join coding club", "coding club details"],
+      "responses": [
+        "💡 **Coding Club — CampusCode:**\n\n• **Focus:** DSA, Web Dev, Competitive Programming, Hackathons\n• **Meetings:** Every Saturday, 10:00 AM – 12:00 PM\n• **Venue:** Computer Lab 204, Block B\n• **How to Join:** Fill the form on the Notice Board or contact the club coordinator\n\n🏆 Past activities: Internal hackathons, LeetCode contests, project showcases\n\nOpen to all branches & years. ✅"
+      ]
+    },
+    {
+      "tag": "all_clubs",
+      "patterns": ["all clubs", "clubs list", "what clubs", "clubs available", "student clubs", "extracurricular", "activities"],
+      "responses": [
+        "🎯 **Student Clubs at Campus:**\n\n| Club | Focus | Meeting Day |\n|------|-------|-------------|\n| 💻 CampusCode | Coding & Tech | Saturday |\n| 🤖 Robotics Club | Hardware & AI | Friday |\n| 🎵 Music Club | Vocals & Instruments | Wednesday |\n| 🎨 Art & Design | Creative Arts | Thursday |\n| 📸 Photography Club | Clicks & Edits | Sunday |\n| 📢 NSS | Social Service | Monthly |\n\nContact your Student Affairs Office or check the notice board to register! ✅"
+      ]
     },
     {
       "tag": "motivation",
-      "patterns": ["need motivation", "burnout", "tired of studying", "college pressure"],
-      "responses": ["You're doing great! Engineering/College is a marathon, not a sprint. Take a short break, hydrate, and remember why you started. You've got this! 🔥"]
+      "patterns": ["motivation", "motivate me", "i'm stressed", "feeling down", "inspire me", "i need motivation", "encourage me", "sad", "depressed"],
+      "responses": [
+        "💪 **You've got this!**\n\n*\"Success is not final, failure is not fatal — it is the courage to continue that counts.\"* — Winston Churchill\n\nRemember: Every expert was once a beginner. Every pro was once an amateur. Keep going, one step at a time. 🚀",
+        "🌟 Hey, tough days are part of the journey! The fact that you showed up today already makes you ahead of the person who gave up. Believe in your process. 💛",
+        "🎓 College is hard — but so are you. Take a break, breathe, and come back stronger. You're building something great. Keep pushing! 🔥"
+      ]
+    },
+    {
+      "tag": "library",
+      "patterns": ["library", "library location", "library timings", "where is library", "books", "borrow book"],
+      "responses": [
+        "📚 **Library Details:**\n\n• **Location:** Block C, Ground Floor\n• **Timings:** 8:30 AM – 5:30 PM (Mon–Sat)\n• **Books Available:** 10,000+ titles across all departments\n• **Borrowing:** Up to 3 books at a time, for 14 days\n• **Fine:** ₹2/day per book for late return\n• **e-Resources:** Available via ERP Portal → Digital Library ✅"
+      ]
+    },
+    {
+      "tag": "wifi",
+      "patterns": ["wifi", "internet", "wi-fi", "wifi password", "campus wifi", "internet access", "network"],
+      "responses": [
+        "📶 **Campus Wi-Fi:**\n\n• **Network Name:** CampusNet_Student\n• **Access:** Use your college roll number as username\n• **Password:** Your ERP portal password\n• **Coverage:** All blocks, canteen, and library\n• **Speed:** Up to 100 Mbps shared\n\n⚠️ Issues? Contact IT Support — Block A, Room 005 or email: itsupport@yourcollege.edu ✅"
+      ]
+    },
+    {
+      "tag": "exam_schedule",
+      "patterns": ["exam", "exam schedule", "exam timetable", "when is exam", "test schedule", "internal marks", "exam dates"],
+      "responses": [
+        "📋 **Exam Information:**\n\n• **Internal Assessments:** Announced by individual faculty — check your class group\n• **Semester Exams:** Published on ERP Portal under **'Exam Schedule'** 2 weeks prior\n• **Hall Tickets:** Available on ERP Portal 1 week before exams\n• **Results:** Published within 3–4 weeks after exam\n\n📌 For exam-related issues, contact the Exam Cell — Admin Block, Room 102. ✅"
+      ]
+    },
+    {
+      "tag": "fees",
+      "patterns": ["fees", "fee payment", "tuition fees", "how to pay fees", "fee due", "fee receipt"],
+      "responses": [
+        "💳 **Fee Payment:**\n\n• **Portal:** Log in to ERP → **'Fee Payment'** section\n• **Modes:** Online (UPI, Net Banking, Debit/Credit Card) or Cash at the Accounts Office\n• **Accounts Office:** Block A, Ground Floor — 9:00 AM to 3:00 PM\n• **Receipt:** Auto-generated on ERP after payment\n\n⚠️ Pay before the due date to avoid a late fine. Check ERP for current due dates. ✅"
+      ]
+    },
+    {
+      "tag": "attendance",
+      "patterns": ["attendance", "my attendance", "attendance percentage", "how to check attendance", "low attendance", "shortage"],
+      "responses": [
+        "📊 **Attendance Details:**\n\n• **Minimum Required:** 75% to be eligible for exams\n• **Check:** ERP Portal → **'My Attendance'**\n• **Updates:** Reflected within 24 hours of class\n• **Shortage Letter:** Issued if attendance falls below 65%\n\n📌 For medical leave or genuine reasons, submit a leave letter to your class coordinator within 3 days. ✅"
+      ]
+    },
+    {
+      "tag": "joke",
+      "patterns": ["joke", "tell me a joke", "make me laugh", "funny", "humor"],
+      "responses": [
+        "😄 Why do programmers prefer dark mode?\n\nBecause light attracts **bugs**! 🐛",
+        "😂 A student asked the professor: 'Will this be on the exam?'\nProfessor: 'Everything is on the exam.'\nStudent: 'Even the attendance?' 💀",
+        "🤣 Why did the student eat his homework?\nBecause the teacher told him it was a **piece of cake**! 🎂"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["thank you", "thanks", "thank u", "thx", "appreciate it", "helpful"],
+      "responses": [
+        "😊 You're welcome! Happy to help anytime. If you have more questions, just ask!",
+        "🎓 Glad I could help! Come back whenever you need campus info. Good luck! 🌟",
+        "No problem at all! That's what I'm here for. 🤝"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["bye", "goodbye", "see you", "take care", "cya", "exit", "quit"],
+      "responses": [
+        "👋 Goodbye! Have a productive day on campus! 🎓",
+        "See you later! Come back anytime you need help. 🚀",
+        "Take care! All the best with your studies! 💪"
+      ]
+    },
+    {
+      "tag": "unknown",
+      "patterns": [],
+      "responses": [
+        "🤔 I'm not sure about that one yet. Try asking about:\n• College timings\n• Computer lab\n• Canteen\n• Clubs\n• Complaints\n• Exams or Attendance\n\nOr contact the Admin Office for specific queries. ✅"
+      ]
     }
   ]
 }
